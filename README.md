@@ -11,4 +11,3 @@
  - conftest - Модуль фикстур проекта.
  - data - Модуль с данными
  - requirements - Модуль с внешними зависимостями для установки ```pip install -r requirements.txt```
-      
