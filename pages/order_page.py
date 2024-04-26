@@ -1,6 +1,7 @@
 import allure
 from pages.base_page import BasePage
 from locators.order_page_locators import OrderPageLocators
+from locators.base_page_locators import *
 
 
 class OrderPage(BasePage):
@@ -26,3 +27,12 @@ class OrderPage(BasePage):
     @allure.step('Проверка успешного оформления заказа')
     def order_issued_check(self):
         return self.get_text(OrderPageLocators.ORDER_STATUS)
+
+    @allure.step('Переход по лого Яндекс')
+    def click_on_yandex_logo(self):
+        self.wait_and_click_element(BasePageLocators.LOGO_SCOOTER)
+
+    @allure.step('Переход по лого Самокат')
+    def click_on_scooter_logo(self):
+        self.wait_and_click_element(BasePageLocators.LOGO_YANDEX)
+        self.tab_switch(DzenLocators.DZEN_LOGO)

@@ -1,8 +1,7 @@
 from selenium.webdriver.common.by import By
-from locators.base_page_locators import BasePageLocators
 
 
-class MainPageLocators(BasePageLocators):
+class MainPageLocators:
     question_1 = (By.XPATH, ".//div[@id='accordion__heading-0']")
     question_2 = (By.XPATH, ".//div[@id='accordion__heading-1']")
     question_3 = (By.XPATH, "//div[@id='accordion__heading-2']")

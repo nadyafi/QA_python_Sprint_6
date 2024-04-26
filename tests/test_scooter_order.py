@@ -3,13 +3,14 @@ import pytest
 
 from data import *
 from locators.order_page_locators import *
+from locators.base_page_locators import *
 
 
 @allure.story('Тесты заказа самоката')
 class TestScooterOrder:
     @allure.title('Позитивный тест заказа самоката')
-    @pytest.mark.parametrize('button, data', [(OrderPageLocators.ORDER_BUTTON_UP, User1),
-                                              (OrderPageLocators.ORDER_BUTTON_DOWN, User2)])
+    @pytest.mark.parametrize('button, data', [(BasePageLocators.ORDER_BUTTON_UP, User1),
+                                              (BasePageLocators.ORDER_BUTTON_DOWN, User2)])
     def test_scooter_order(self, driver, button, data, order_page, main_page):
         main_page.open()
         order_page.accept_cookies()

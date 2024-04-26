@@ -2,7 +2,6 @@ from datetime import datetime, timedelta
 
 
 class Url:
-    BASE_PAGE = 'https://qa-scooter.praktikum-services.ru/'
     ORDER_PATH = 'order'
     MAIN_PAGE = 'https://qa-scooter.praktikum-services.ru/'
     DZEN_PAGE = 'https://dzen.ru/'

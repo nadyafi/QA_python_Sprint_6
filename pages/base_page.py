@@ -8,13 +8,13 @@ from data import Url
 class BasePage:
     def __init__(self, driver, url_path):
         self.driver = driver
-        url = Url.BASE_PAGE
+        url = Url.MAIN_PAGE
         self.url = url + url_path
 
     @allure.step('Открытие браузера на заданный URL')
     def open(self):
         url = self.url
-        return self.driver.get(url)
+        self.driver.get(url)
 
     @allure.step('Текущий URL')
     def get_url(self):

@@ -6,7 +6,7 @@ from locators.main_page_locators import *
 
 @allure.story('Тесты выпадающего списка "Вопросы о важном"')
 class TestDropDownList:
-    @allure.title('Тест соответсвия текста ответа')
+    @allure.title('Тест соответствия текста ответа')
     @pytest.mark.parametrize('question, answer, answer_text', [
         [MainPageLocators.question_1, MainPageLocators.answer_1, Answer_text.answer_text_1],
         [MainPageLocators.question_2, MainPageLocators.answer_2, Answer_text.answer_text_2],
